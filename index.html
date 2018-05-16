@@ -80,12 +80,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Gelory&#39;s blog">
+<meta property="og:title" content="Gengpeng&#39;s blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Gelory&#39;s blog">
+<meta property="og:site_name" content="Gengpeng&#39;s blog">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gelory&#39;s blog">
+<meta name="twitter:title" content="Gengpeng&#39;s blog">
 
 
 
@@ -121,7 +121,7 @@
 
 
 
-  <title>Gelory's blog</title>
+  <title>Gengpeng's blog</title>
   
 
 
@@ -152,7 +152,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Gelory's blog</span>
+        <span class="site-title">Gengpeng's blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -229,16 +229,183 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/08/前端入门之CSS居中总结/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/16/前端入门之JS数据类型/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Gelory">
+      <meta itemprop="name" content="耿朋">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Gelory's blog">
+      <meta itemprop="name" content="Gengpeng's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/16/前端入门之JS数据类型/" itemprop="url">前端入门之JS数据类型</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-16T18:30:55+08:00">
+                2018-05-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Javascript里的数据类型，共分为七种，js中的每一个值都属于某一种数据类型。</p>
+<p>1.数字number：整数和小数。</p>
+<p>2.字符串string：文本。</p>
+<p>3.布尔值Boolean：true和false。</p>
+<p>4.symbol类型：生成一个全局唯一的值。</p>
+<p>5.null：空值。</p>
+<p>6.undefined：未定义值。</p>
+<p>7.对象object：值和键的组合，即为哈希表。包括数组及函数。</p>
+<p>前六种为基本类型，最后一种为复杂类型。</p>
+<p> 1.数字类型：</p>
+<pre><code>js中可以用不同进制表示数字，通过不同的前缀表示不同进制：
+
+十进制：没有前导0的数值。
+
+八进制：有前缀0o或0O的数值，或者有前导0、且只用到0-7的八个阿拉伯数字的数值。
+
+十六进制：有前缀0x或0X的数值
+
+二进制：有前缀0b或者0B的数值
+</code></pre><p> 2.字符串：</p>
+<pre><code>用单引号或者双引号将文本括起来的类型。如果需要用特殊字符表示字符串可以用到转义字符\。
+</code></pre><p>\0 ：null（\u0000）</p>
+<p>\b ：后退键（\u0008）</p>
+<p>\f ：换页符（\u000C）</p>
+<p>\n ：换行符（\u000A）</p>
+<p>\r ：回车键（\u000D）</p>
+<p>\t ：制表符（\u0009）</p>
+<p>\v ：垂直制表符（\u000B）</p>
+<p>\’ ：单引号（\u0027）</p>
+<p>\” ：双引号（\u0022）</p>
+<p>\ ：反斜杠（\u005C）</p>
+<p>字符串默认不能换行，如果长字符串必须分成多行，可以在每一行的尾部使用反斜杠。但是这种方式如果\后面有空格会报错而且不好查找错误。</p>
+<p>我们还可以通过连接运算符（+）可以连接多个单行字符串，将长字符串拆成多行书写，输出的时候也是单行。</p>
+<p>另一种es6的方法为用<code>多行字符串</code>来进行字符串的换行，这种方式在输出时会将换行也输出出来。</p>
+<p>3.null与undefined</p>
+<pre><code>都表示空值，在if中都表示false，区别在于：
+</code></pre><p>（规范）如果一个变量没有被赋值，那么这个变量的值就是 undefiend<br>（习俗）如果你想表示一个还没赋值的对象，就用 null。如果你想表示一个还没赋值的字符串/数字/布尔/symbol，就用 undefined（但是实际上你直接 var xxx 一下就行了，不用写 var xxx = undefined）<br>4.object类型</p>
+<pre><code> 对象就是一组“键值对”（key-value）的集合，是一种无序的复合数据集合。对象的另一种表现形式为哈希表，数组是一种特殊的对象。
+
+对象的key值得引用可以通过xxx.key或者xxx[&apos;key&apos;]，但是当key为数字时只能通过xxx[1]来引用，此时虽然1没有加引号但是系统会默认给数字加引号。
+
+对象的键名都是字符串，不加引号时系统会自动加上引号，但是当键名不符合标识符命名规则时，必须在键名上加上引号。
+
+当通过xxx[key]来引用时，key未加引号，表明key为变量。
+</code></pre><p>5.typeof 操作符</p>
+<p>xxx 的类型  string  number  boolean   symbol   undefined   null       object   function</p>
+<p>typeof xxx ‘string’ number’ ‘boolean’ ‘symbol’ ‘undefined’ ‘object’ ‘object’ ‘function’</p>
+<p>其中，比较特殊的为null的数据类型为null，但是typeof后为object，function的数据类型为object，但是typeof后的值为function。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/08/前端入门之CSS居中总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="耿朋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gengpeng's blog">
     </span>
 
     
@@ -400,13 +567,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/29/第二篇博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Gelory">
+      <meta itemprop="name" content="耿朋">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Gelory's blog">
+      <meta itemprop="name" content="Gengpeng's blog">
     </span>
 
     
@@ -520,13 +687,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/29/开博大吉/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Gelory">
+      <meta itemprop="name" content="耿朋">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Gelory's blog">
+      <meta itemprop="name" content="Gengpeng's blog">
     </span>
 
     
@@ -640,13 +807,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/29/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Gelory">
+      <meta itemprop="name" content="耿朋">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Gelory's blog">
+      <meta itemprop="name" content="Gengpeng's blog">
     </span>
 
     
@@ -787,7 +954,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">Gelory</p>
+              <p class="site-author-name" itemprop="name">耿朋</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -798,7 +965,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -843,7 +1010,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Gelory</span>
+  <span class="author" itemprop="copyrightHolder">耿朋</span>
 
   
 </div>
